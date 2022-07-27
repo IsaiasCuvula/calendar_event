@@ -19,7 +19,8 @@ class HomePage extends StatelessWidget {
       Colors.pink,
       Colors.yellow,
       Colors.purpleAccent,
-      Colors.orange
+      Colors.orange,
+      Colors.pink,
     ];
     final List<Map<String, String>> leaves = LeaveModel.dummyData['data'];
 
@@ -51,12 +52,12 @@ class HomePage extends StatelessWidget {
               defaultBuilder: (ctx, day, focusedDay) {
                 int index = 0;
                 for (LeaveData leaveEvent in events) {
+                  index++;
                   final DateTime event =
                       _stringToDateTimeObject(leaveEvent.calenderDate!);
                   if (day.day == event.day &&
                       day.month == event.month &&
                       day.year == event.year) {
-                    index++;
                     return Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: Container(
@@ -67,9 +68,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         child: Center(
-                          child: Text(
-                            '${day.day}',
-                          ),
+                          child: Text('${day.day}'),
                         ),
                       ),
                     );

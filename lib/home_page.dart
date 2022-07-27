@@ -53,8 +53,9 @@ class HomePage extends StatelessWidget {
                 int index = 0;
                 for (LeaveData leaveEvent in events) {
                   index++;
-                  final DateTime event =
-                      _stringToDateTimeObject(leaveEvent.calenderDate!);
+                  final DateTime event = _stringToDateTimeObject(
+                    leaveEvent.calenderDate!,
+                  );
                   if (day.day == event.day &&
                       day.month == event.month &&
                       day.year == event.year) {

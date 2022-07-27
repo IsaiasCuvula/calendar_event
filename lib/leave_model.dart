@@ -74,13 +74,14 @@ class LeaveData {
   String? endFrom;
   String? calenderDate;
 
-  LeaveData(
-      {required this.leaveDate,
-      required this.holidayType,
-      required this.holidayReason,
-      required this.startFrom,
-      required this.endFrom,
-      required this.calenderDate});
+  LeaveData({
+    required this.leaveDate,
+    required this.holidayType,
+    required this.holidayReason,
+    required this.startFrom,
+    required this.endFrom,
+    required this.calenderDate,
+  });
 
   LeaveData.fromJson(dynamic json) {
     leaveDate = json['leave_date'];
